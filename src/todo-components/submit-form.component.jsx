@@ -1,7 +1,12 @@
 import React from 'react';
+import { PlusCircleIcon } from '@primer/octicons-react';
+import './submit-form.css';
+
+
 // we need to use a class component because we have state information/ updating inside the component 
 
 class SubmitForm extends React.Component {
+  
   //creates a state object so we can later place the value of input inside and send upwards via function
   state ={input:''};
   
@@ -20,17 +25,18 @@ class SubmitForm extends React.Component {
 
   render(){
   return(
-    <div className="submit-form">
-      <form onSubmit={this.onSumbit}>
+    <div className="submit-form ">
+      <form onSubmit={this.onSumbit} className="field is-grouped">
         <input 
-          className="inputField" 
+          className="inputField input is-rounded" 
           type="text" 
           placeholder="Enter new list item..." 
           value={this.state.input}
           //onChange even handler updates the info in state object 
           onChange={(event) => this.setState({input: event.target.value})}
         />
-        <button>Add</button>
+        <button type="sumbit" className="submit-button"><PlusCircleIcon size={24} /></button>
+        
       </form>
 
     </div>

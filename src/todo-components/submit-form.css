@@ -1,0 +1,13 @@
+.submit-form {
+  padding-top: 10px;
+}
+.submit-button {
+  border: none;
+  background: none;
+}
+
+.input {
+  max-width: 70%;
+  background-color: rgb(138, 43, 226, 0.4);
+  outline: rgb(138, 43, 226);
+}

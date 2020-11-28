@@ -2,7 +2,8 @@ import React from "react";
 import './todo-app.css';
 import { Header } from "./header.component.jsx";
 import { TodoList } from "./todo-list.component";
-import SubmitForm from "./submit-form.component"
+import SubmitForm from "./submit-form.component";
+ 
 
 
 class TodoApp extends React.Component {
@@ -27,7 +28,7 @@ class TodoApp extends React.Component {
 
 
   render() { return (
-    <div className="todo-app">
+    <div className="todo-app box">
       <Header numberTodos={this.state.tasks.length}/>
       <TodoList tasks={this.state.tasks} onDelete={this.handleDelete}/>
       {/* why this. only in this component = 

@@ -1,5 +1,11 @@
 .todo-app {
   border: 1px solid blueviolet;
   background-color: rgb(216, 185, 245, 0.7);
-  margin: 50px;
+  margin: 30px;
+  padding-left: 40px;
+}
+
+.todo-app h4 {
+  color: blueviolet;
+  padding-bottom: 15px;
 }

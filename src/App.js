@@ -12,10 +12,10 @@ function App() {
     <div className="App">
       <Container>
         <Row>
-          <Col sm={6}>
+          <Col md>
             <FormValidation />
             </Col>
-          <Col sm={6}> 
+          <Col md> 
             <TodoApp />
           </Col>
         </Row>
