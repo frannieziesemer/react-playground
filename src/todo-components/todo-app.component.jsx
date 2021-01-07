@@ -20,8 +20,9 @@ class TodoApp extends React.Component {
     //re - setState as new array
     this.setState({tasks: newArr});
   }
-
+//has to be in the component becuase we are adding data to tasks state object
   handleSumbit = (input) => {
+    //takes input (state object/data) from submit-form component and adds it to array of tasks
     this.setState({tasks: [...this.state.tasks, input]})
     // make a new function here - which will update tasks data
   }
@@ -33,6 +34,7 @@ class TodoApp extends React.Component {
       <TodoList tasks={this.state.tasks} onDelete={this.handleDelete}/>
       {/* why this. only in this component = 
       because it is a class component and you have to do it just in class components ecause of states   */}
+      {/* here we have to send the handleAdd function downwards using props called handleSubmit. */}
       <SubmitForm handleSubmit={this.handleSumbit} />
 
       

@@ -6,15 +6,18 @@ import './submit-form.css';
 // we need to use a class component because we have state information/ updating inside the component 
 
 class SubmitForm extends React.Component {
-  
+  //state object, input is undefined because we want the input clear field empty on load
   //creates a state object so we can later place the value of input inside and send upwards via function
   state ={input:''};
   
-//handle submit is the props from above level function  setting input value as 
+//onSubmit function is an event called in the <form> tag and called when submit button is clicked
   onSumbit = (event) => {
     event.preventDefault();
-    //when onSubmit function is called the handle submit funciton in todo-app component is called with the input content passed into 
+    //onSubmit function calls handle submit function from App.js component
+    //handleSubmit function has been sent down to this component via props
+    //it passes in the input value 
     this.props.handleSubmit(this.state.input);
+    //sets state back to empty for the input field on submit
     this.setState({ input: ''});
 
   }
@@ -32,7 +35,8 @@ class SubmitForm extends React.Component {
           type="text" 
           placeholder="Enter new list item..." 
           value={this.state.input}
-          //onChange even handler updates the info in state object 
+          //onChange to handle input value 
+          // updates state (input) object within this component
           onChange={(event) => this.setState({input: event.target.value})}
         />
         <button type="sumbit" className="submit-button"><PlusCircleIcon size={24} /></button>

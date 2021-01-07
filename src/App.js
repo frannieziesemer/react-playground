@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import TodoApp  from './todo-components/todo-app.component.jsx';
+import ApiFetch from './api-fetch-components/api-fetch.component.jsx';
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <Col sm>sm=true</Col>
+          <Col sm>
+            <ApiFetch />
+          </Col>
           <Col sm>sm=true</Col>
           <Col sm>sm=true</Col>
         </Row>
